@@ -1,0 +1,317 @@
+@import 'reset';
+@import 'flaticon';
+
+.container {
+    margin: 0 auto;
+    max-width: 945px;
+    width: 100%;
+}
+// ***** PAGE HEADER WITH MAIN NAVIGATION *****
+header {
+    margin: 0 auto;
+    max-width: 945px;
+    width: 100%;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    #logo {
+        float: left;
+        a {
+            display: inline-block;
+            width: 265px;
+            height: 75px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    #main-navigation {
+        float: right;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                float: left;
+                font-family: 'Roboto', sans-serif;
+                text-transform: uppercase;
+                a {
+                    padding: 0 16px;
+                    color: #777777;
+                    font-size: 15px;
+                    // line-height: 95px;
+                    text-decoration: none;
+                }
+                button {
+                    height: 45px;
+                    width: 220px;
+                    padding: 1px;
+                    padding-right: 18px;
+                    background-color: #e39030;
+                    color: #fff;
+                    border-radius: 25px;
+                    border: 2px solid #fff;
+                    box-shadow: 0 0 0 1px #e39030;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    cursor: pointer;
+                    p {
+                        display: inline-block;
+                        line-height: 22px;
+                    }
+                    span {
+                        float: right;
+                        font-size: 22px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+// ##### end of PAGE HEADER WITH MAIN NAVIGATION #####
+// ***** MAIN BANNER *****
+.slider {
+    height: 465px;
+    position: relative;
+    overflow: hidden;
+    .blur-filter{
+        position: absolute;
+        width: 100%;
+        height: 465px;
+        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+        -webkit-filter: url(#blur-filter);
+        filter: url(#blur-filter);
+        -webkit-filter: blur(15px);
+        filter: blur(15px);
+        background-image: url('../assets/img/banner.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .slider-text {
+        position: relative;
+        max-width: 760px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 136px 0;
+        z-index: 999;
+        text-align: center;
+        font-weight: 700;
+        font-family: 'Varela Round', sans-serif;
+        color: #fff;
+        h1 {
+            font-size: 50px;
+            line-height: 55px;
+        }
+        h3 {
+            font-size: 34px;
+            padding-bottom: 30px;
+        }
+        .divider {
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+        p {
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 500;
+        }
+    }
+}
+// ##### end of MAIN BANNER #####
+// ***** SERVICES CONTAINER *****
+.services {
+    margin: 65px 0 60px 0;
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    color: #555555;
+    .title {
+        margin-bottom: 20px;
+        span {
+            font-size: 38px;
+            color: #43bfa2;
+        }
+        h4 {
+            padding-left: 15px;
+            display: inline-block;
+            font-size: 20px;
+            vertical-align: super;
+            font-weight: 700;
+        }
+    }
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    button {
+        width: 225px;
+        height: 40px;
+        margin-top: 20px;
+        padding: 0 10px;
+        color: #4cb9a3;
+        border: 1px solid #4cb9a3;
+        border-radius: 25px;
+        background-color: transparent;
+        cursor: pointer;
+        span {
+            float: left;
+            font-size: 17px;
+        }
+        p{
+            display: inline-block;
+            font-size: 13px;
+            line-height: 13px;
+            vertical-align: text-top;
+        }
+    }
+}
+// ##### end of SERVICES CONTAINER #####
+// ***** SERVICE USERS *****
+.services-users-gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#48b4a6+0,122539+100 */
+    background: rgb(72,180,166); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(72,180,166,1) 0%, rgba(18,37,57,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(72,180,166,1) 0%,rgba(18,37,57,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(72,180,166,1) 0%,rgba(18,37,57,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48b4a6', endColorstr='#122539',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    padding-top: 35px;
+    padding-bottom: 55px;
+    font-family: 'Varela Round', sans-serif;
+    color: #fff;
+
+    h4 {
+        margin-left: 5px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .service-user {
+        position: relative;
+        width: calc((100% - 84px) / 7);
+        height: 98px;
+        margin: 5px;
+        padding: 20px 0;
+        float: left;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        text-align: center;
+        h5 {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+        p{
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            span {
+                font-size: 65px;
+            }
+        }
+    }
+    .active {
+        height: 112px;
+        margin-top: -2;
+        box-shadow: 0 5px 0 0px rgba(255,255,255,0.5);
+        color: #5496a4;
+        background-color: #fff;
+    }
+}
+// ##### end of SERVICE USERS #####
+// ***** SELECTED USER SERVICE INFO *****
+.selected-user-service-gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c1e8dd+0,90b0b4+100 */
+    background: rgb(193,232,221); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(193,232,221,1) 0%, rgba(144,176,180,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  rgba(193,232,221,1) 0%,rgba(144,176,180,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  rgba(193,232,221,1) 0%,rgba(144,176,180,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1e8dd', endColorstr='#90b0b4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    padding: 40px 0;
+    position: relative;
+    text-align: center;
+    
+    .text-fix {
+        text-align: initial;
+    }
+
+    .selected-user-service {
+        width: calc(100% / 2);
+        float: left;
+        font-family: 'Varela Round', sans-serif;
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #555555;
+        }
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #0b6a7d;
+        }
+        &:first-child{
+            p {
+                padding: 30px 75px 0 0;
+            }
+        }
+        &:last-child{
+            p {
+                line-height: 28px;
+            }
+            span {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .triangle {
+        position: absolute;
+        top: -25px;
+        margin-left: -20px;
+
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 22.5px 25px 22.5px;
+        border-color: transparent transparent #a5c9c6 transparent;
+    }
+}
+// ##### end of SELECTED USER SERVICE INFO #####
+// ***** OUR CUSTOMERS *****
+.customers {
+    font-family: 'Varela Round', sans-serif;
+    .title{
+        position: relative;
+        h4 {
+            padding: 40px 0 30px 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #555555;
+            border-bottom: 1px solid #dddddd;
+        }
+        .arrows-box {
+            width: 70px;
+            height: 25px;
+            font-size: 25px;
+            color: #555555;
+            display: inline-block;
+            position: absolute;
+            right: 55px;
+            bottom: -12.5px;
+            background-color: #fff;
+            text-align: center;
+            .rotate::before {
+                -ms-transform: rotate(180deg); /* IE 9 */
+                -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+// ##### OUR CUSTOMERS ######

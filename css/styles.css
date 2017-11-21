@@ -188,7 +188,13 @@ header {
           padding: 0 16px;
           color: #777777;
           font-size: 15px;
-          text-decoration: none; }
+          text-decoration: none;
+          -webkit-transition: font-weight 0.5s ease-in-out;
+          /* For Safari 3.1 to 6.0 */
+          transition: font-weight 0.5s ease-in-out; }
+          header #main-navigation ul li a:hover {
+            color: #555;
+            font-weight: 600; }
         header #main-navigation ul li button {
           height: 45px;
           width: 220px;
@@ -201,7 +207,12 @@ header {
           box-shadow: 0 0 0 1px #e39030;
           text-transform: uppercase;
           font-weight: 600;
-          cursor: pointer; }
+          cursor: pointer;
+          -webkit-transition: box-shadow 0.5s ease-in-out;
+          /* For Safari 3.1 to 6.0 */
+          transition: box-shadow 0.5s ease-in-out; }
+          header #main-navigation ul li button:hover {
+            box-shadow: none; }
           header #main-navigation ul li button p {
             display: inline-block;
             line-height: 22px; }
@@ -282,6 +293,9 @@ header {
     border: 1px solid #4cb9a3;
     border-radius: 25px;
     background-color: transparent;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.5s ease-in-out;
     cursor: pointer; }
     .services button span {
       float: left;
@@ -291,6 +305,9 @@ header {
       font-size: 13px;
       line-height: 13px;
       vertical-align: text-top; }
+    .services button:hover {
+      background-color: #4cb9a3;
+      color: #fff; }
 
 .services-users-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#48b4a6+0,122539+100 */
@@ -385,7 +402,8 @@ header {
     border-color: transparent transparent #a5c9c6 transparent; }
 
 .customers {
-  font-family: 'Varela Round', sans-serif; }
+  font-family: 'Varela Round', sans-serif;
+  color: #555555; }
   .customers .title {
     position: relative; }
     .customers .title h4 {
@@ -405,9 +423,220 @@ header {
       bottom: -12.5px;
       background-color: #fff;
       text-align: center; }
+      .customers .title .arrows-box span {
+        cursor: pointer; }
       .customers .title .arrows-box .rotate::before {
         -ms-transform: rotate(180deg);
         /* IE 9 */
         -webkit-transform: rotate(180deg);
         /* Chrome, Safari, Opera */
         transform: rotate(180deg); }
+  .customers .content {
+    margin-top: 30px; }
+    .customers .content .image {
+      width: 172px;
+      height: 120px;
+      float: left;
+      background-image: url("../assets/img/customer-1.jpg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .customers .content .text {
+      width: calc(100% - 172px);
+      float: left; }
+      .customers .content .text h5 {
+        margin-bottom: 10px;
+        font-size: 15px; }
+      .customers .content .text p {
+        font-size: 12px;
+        line-height: 22px; }
+
+.full-divider {
+  margin-top: 100px;
+  border-bottom: 1px solid #dddddd; }
+
+.partners {
+  margin: 30px 0 65px 0;
+  font-family: 'Varela Round', sans-serif; }
+  .partners .title {
+    margin-bottom: 30px; }
+    .partners .title h4 {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 700;
+      color: #555555; }
+    .partners .title .button-container {
+      display: inline-block;
+      float: right;
+      width: 240px;
+      margin-top: -52.5px;
+      text-align: center;
+      background-color: #fff; }
+      .partners .title .button-container button {
+        height: 45px;
+        width: 220px;
+        padding: 1px;
+        padding-right: 18px;
+        background-color: #e39030;
+        color: #fff;
+        border-radius: 25px;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 1px #e39030;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        -webkit-transition: box-shadow 0.5s ease-in-out;
+        /* For Safari 3.1 to 6.0 */
+        transition: box-shadow 0.5s ease-in-out; }
+        .partners .title .button-container button:hover {
+          box-shadow: none; }
+        .partners .title .button-container button p {
+          display: inline-block;
+          line-height: 22px; }
+        .partners .title .button-container button span {
+          float: right;
+          font-size: 22px; }
+  .partners .partner {
+    width: calc(100% / 7);
+    float: left; }
+    .partners .partner img {
+      margin: 0 auto;
+      width: 125px;
+      height: 125px;
+      border: 1px solid #cdcdcd;
+      border-radius: 20px; }
+
+.contact {
+  position: relative;
+  height: 495px;
+  overflow: hidden; }
+  .contact .blur-filter {
+    position: absolute;
+    width: 100%;
+    height: 495px;
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+    -webkit-filter: url(#blur-filter);
+    filter: url(#blur-filter);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    background-image: url("../assets/img/footer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .contact .contact-inner {
+    position: relative;
+    margin-top: 50px;
+    font-family: 'Varela Round', sans-serif; }
+    .contact .contact-inner .contact-contaier {
+      width: calc((100% - 100px) / 2);
+      float: left;
+      margin-right: 50px; }
+      .contact .contact-inner .contact-contaier h4 {
+        margin-bottom: 30px;
+        font-size: 20px;
+        color: #fff; }
+      .contact .contact-inner .contact-contaier:first-child h4 {
+        font-weight: 700; }
+      .contact .contact-inner .contact-contaier:first-child p {
+        margin-bottom: 15px; }
+      .contact .contact-inner .contact-contaier:first-child button {
+        width: 225px;
+        height: 40px;
+        padding: 0;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 25px;
+        color: #fff;
+        font-family: 'Varela Round', sans-serif;
+        -webkit-transition: background-color 0.5s ease-in-out;
+        /* For Safari 3.1 to 6.0 */
+        transition: background-color 0.5s ease-in-out; }
+        .contact .contact-inner .contact-contaier:first-child button:hover {
+          background-color: #fff;
+          color: rgba(0, 0, 0, 0.4); }
+      .contact .contact-inner .contact-contaier:last-child p {
+        padding: 10px 0 10px 0;
+        font-size: 14px;
+        color: #fff; }
+        .contact .contact-inner .contact-contaier:last-child p .title {
+          width: 110px;
+          display: inline-block; }
+      .contact .contact-inner .contact-contaier:last-child p:not(:last-of-type) {
+        border-bottom: 1px solid #fff; }
+      .contact .contact-inner .contact-contaier:last-child .social {
+        margin-top: 30px; }
+        .contact .contact-inner .contact-contaier:last-child .social span {
+          margin-right: 10px;
+          width: 45px;
+          height: 45px;
+          display: inline-block;
+          background-color: #fff;
+          border-radius: 50%;
+          font-size: 24px;
+          text-align: center;
+          opacity: 0.5; }
+          .contact .contact-inner .contact-contaier:last-child .social span:before {
+            line-height: 45px; }
+      .contact .contact-inner .contact-contaier input {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+        color: #0b6a7d;
+        border: none;
+        border-radius: 25px;
+        outline: none; }
+      .contact .contact-inner .contact-contaier ::-webkit-input-placeholder {
+        /* Chrome */
+        color: #0b6a7d;
+        font-size: 14px; }
+      .contact .contact-inner .contact-contaier :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #0b6a7d;
+        font-size: 14px; }
+      .contact .contact-inner .contact-contaier ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #0b6a7d;
+        font-size: 14px;
+        opacity: 1; }
+      .contact .contact-inner .contact-contaier :-moz-placeholder {
+        /* Firefox 4 - 18 */
+        color: #0b6a7d;
+        font-size: 14px;
+        opacity: 1; }
+      .contact .contact-inner .contact-contaier textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+        color: #0b6a7d;
+        border: none;
+        border-radius: 25px;
+        resize: none;
+        outline: none; }
+
+.footer-nav-container {
+  padding: 40px 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+  color: #858585; }
+  .footer-nav-container p {
+    display: inline-block; }
+    .footer-nav-container p a {
+      color: #666666; }
+  .footer-nav-container strong {
+    font-weight: 700;
+    color: #666666; }
+  .footer-nav-container #footer-navigation ul li {
+    float: left; }
+    .footer-nav-container #footer-navigation ul li a {
+      color: #858585;
+      padding-right: 25px;
+      text-decoration: none;
+      -webkit-transition: font-weight 0.5s ease-in-out;
+      /* For Safari 3.1 to 6.0 */
+      transition: font-weight 0.5s ease-in-out; }
+      .footer-nav-container #footer-navigation ul li a:hover {
+        color: #555;
+        font-weight: 600; }
+
+footer {
+  border-bottom: 5px solid #dddddd; }
